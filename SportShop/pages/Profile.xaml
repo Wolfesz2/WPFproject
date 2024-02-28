@@ -1,0 +1,62 @@
+﻿<Page x:Class="SportShop.pages.Profile"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SportShop.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Profile">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="28*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center">
+            <Label Content="Профиль" FontSize="20" HorizontalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <Label Content="Фамилия:" Width="100"/>
+                <TextBox x:Name="FamBox" Width="120"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <Label Content="Имя:" Width="100"/>
+                <TextBox x:Name="NameBox" Width="120"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <Label Content="Почта:" Width="100"/>
+                <TextBox x:Name="MailBox" Width="120"/>
+            </StackPanel>
+            <Label Content="Адрес:" FontSize="15"/>
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <Label Content="Город:" Width="100"/>
+                    <TextBox x:Name="CityBox" Width="120"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <Label Content="Улица:" Width="100"/>
+                    <TextBox x:Name="StreetBox" Width="120"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <Label Content="Дом:" Width="100"/>
+                    <TextBox x:Name="HouseBox" Width="120"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <Label Content="Квартира:" Width="100"/>
+                    <TextBox x:Name="FlatBox" Width="120"/>
+                </StackPanel>
+            </StackPanel>
+            
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Column="1" Grid.Row="1">
+            <Button x:Name="SaveButton" Content="Сохранить и выйти" Width="120" Margin="5" Click="SaveButton_Click"/>
+            <Button x:Name="ExitButton" Content="Выйти" Width="120" Margin="5" Click="ExitButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>
